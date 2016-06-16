@@ -6,7 +6,7 @@
 // section for inputting name
 var testMyName = function(){
     var fname = document.getElementById("firstName").value;
-    console.log("hello " + fname );
+    return fname;
 }
 
 
@@ -17,12 +17,10 @@ var questionOne = function(){
     for(var i=0; i < allOfMyAnswers.length ; i++){
         var currentAnswer = allOfMyAnswers[i];
         if (currentAnswer.checked){
-            return parseInt(currentAnswer);
+            return parseInt(currentAnswer.value);
         }
     }
 }
-var AnswerOne= questionOne();
-
 
 
 //question two JS code
@@ -34,11 +32,10 @@ var questionTwo = function(){
             var boxStatus = questtwo[i];
             if (boxStatus.checked){
                 checkedoff += 1;
-            } console.log(checkedoff)
-        } return checkedoff;
-console.log(checkedoff)
+            }
+        }
+    return checkedoff;
 }
-var AnswerTwo=questionTwo();
 
 
 //question three JS code
@@ -53,22 +50,20 @@ var questionThree = function () {
         return 0;
     }
 }
-var AnswerThree = questionThree();
 
 
 //question four JS code
 
 var questionFour = function(){
-    var questfour = document.getElementsByName("points");
-    questfour = parseInt(questfour);
+    var questfour = document.getElementById("points");
+    questfour = parseInt(questfour.value);
     return questfour;
 }
-var AnswerFour = questionFour();
 
 //question five for JS code
 
 var questionFive = function(){
-    var questfive= document.getElementById("quest5.value");
+    var questfive= document.getElementById("quest5").value;
     if(questfive === "jupiter"){
         return 1;
     }
@@ -76,11 +71,44 @@ var questionFive = function(){
         return 0;
 
     }
- var AnswerFive = questionFive();
 }
+
+
 
 
 var pointAggregator = function(){
-var usersPoints = AnswerOne+ AnswerTwo + AnswerThree + AnswerFour + AnswerFive ;
-console.log(usersPoints);
+    var AnswerOne= questionOne();
+    var AnswerTwo=questionTwo();
+    var AnswerThree = questionThree();
+    var AnswerFour = questionFour();
+    var AnswerFive = questionFive();
+
+    var usersPoints = AnswerOne + AnswerTwo + AnswerThree + AnswerFour + AnswerFive ;
+// var userStatus = " "
+    if(usersPoints === 17){
+        var userStatus = " Rocket scientist ";
+    }
+    else if(usersPoints <= 10 && usersPoints>5){
+        userStatus = "cosmonaut";
+    }
+    else if(usersPoints<=5){
+        userStatus = "person who should look up more often";
+    }
+    console.log(testMyName() + " you got a score of " + usersPoints + " making you a " + userStatus);
 }
+
+
+
+
+// var tester = function(){
+//     var AnswerOne= questionOne();
+//     var AnswerTwo=questionTwo();
+//     var AnswerThree = questionThree();
+//     var AnswerFour = questionFour();
+//     var AnswerFive = questionFive();
+//     console.log(AnswerOne);
+//     console.log(AnswerTwo);
+//     console.log(AnswerThree);
+//     console.log(AnswerFour);
+//     console.log(AnswerFive);
+// }
