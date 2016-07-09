@@ -9,8 +9,10 @@
 
 
 
-<body>
-<h1>THIS IS THE QUIZ </h1>
+<body class="backgroundStyle">
+
+
+<h1 class="centered">Space Quiz </h1>
 
 <!--Section for inputting name-->
 <label for="firstName">First name</label>
@@ -20,66 +22,66 @@
 <br>
 
 <!--Section for radio input q1-->
-<h2>Question 1: What is the closest planet to earth </h2>
+<h2 class="underliner">Question 1: What is the closest planet to earth </h2>
 
-    <label for= "venus"> Venus </label>
-    <input type ="radio" name="proximity" id="venus" value="1"><br>
+    <label class="answerMargin" for= "venus"> Venus </label>
+    <input  type ="radio" name="proximity" id="venus" value="1"><br>
 
-    <label for= "mars"> Mars </label>
-    <input type ="radio" name="proximity" id="mars" value="0"><br>
+    <label class="answerMargin" for= "mars"> Mars </label>
+    <input  type ="radio" name="proximity" id="mars" value="0"><br>
 
-    <label for= "jupiter"> Jupiter </label>
+    <label class="answerMargin" for= "jupiter"> Jupiter </label>
     <input type ="radio" name="proximity" id="jupiter" value="0"><br>
 
-    <label for= "uranus"> Uranus </label>
+    <label class="answerMargin" for= "uranus"> Uranus </label>
     <input type ="radio" name="proximity" id="uranus" value="0"><br>
 
-    <label for= "neptune"> Neptune </label>
+    <label class="answerMargin" for= "neptune"> Neptune </label>
     <input type ="radio" name="proximity" id="neptune" value="0"><br>
 
 
 <!--Section for checkbox q2-->
-<h2>Question 2: which of the following are planets with rings in our solar system?</h2>
+<h2 class="underliner">Question 2: Which of the following are planets with rings in our solar system?</h2>
 
-    <label for= "venus"> Venus </label>
+    <label class="answerMargin" for= "venus"> Venus </label>
     <input type="checkbox" name="solarS" value="0"> <br>
 
-    <label for= "mercury"> Mercury </label>
+    <label class="answerMargin"> Mercury </label>
     <input type="checkbox" name="solarS" value="0"> <br>
 
 
-    <label for= "mars"> Mars </label>
+    <label class="answerMargin" for= "mars"> Mars </label>
     <input type="checkbox" name="solarS" value="0"> <br>
 
-    <label for= "jupiter"> Jupiter </label>
+    <label class="answerMargin" for= "jupiter"> Jupiter </label>
     <input type="checkbox" name="solarS" value="1"> <br>
 
-    <label for= "saturn"> Saturn </label>
+    <label class="answerMargin"> Saturn </label>
     <input type="checkbox" name="solarS" value="1"> <br>
 
-    <label for= "uranus"> Uranus </label>
+    <label class="answerMargin" for= "uranus"> Uranus </label>
     <input type="checkbox" name="solarS" value="1"> <br>
 
-    <label for= "neptune"> Neptune </label>
+    <label class="answerMargin" for= "neptune"> Neptune </label>
     <input type="checkbox" name="solarS" value="1"> <br>
 
 
 
     <!--Section for number q3-->
-<h2>Question 3: Between 0 to 10, How many billions of stars are there in our galaxy? </h2>
+<h2 class="underliner">Question 3: Between 0 to 10, How many billions of stars are there in our galaxy? </h2>
 
-    <label for = "numstar"> Between 0 and 10 </label>
+    <label class="answerMargin"> Between 0 and 10 </label>
     <input type="number" id="starryNight" min="0" max="10">
 
 
     <!--Section for number q4-->
-    <h2>Question 4: With the smallest on the left, and largest on the right, slide the scale to represent the effect of human existence on the functioning of the universe</h2>
-    <label for= "Importance"> Our Importance </label>
-    <input type="range" id="points" min="0" max="10">
+    <h2 class="underliner">Question 4: slide the scale to represent the importance of human kind in the universe</h2>
+    <label class="answerMargin"> Our Importance </label>
+    <input class="answerMargin" type="range" id="points" min="0" max="10">
 
     <!--Section for number q5-->
-    <h2>Question 5: Which of the following is the largest planet in the solar system</h2>
-    <select id =quest5>
+    <h2 class="underliner">Question 5: Which of the following is the largest planet in the solar system</h2>
+    <select class="answerMargin" id =quest5>
         <option value="nil"> _______ </option>
         <option value="jupiter"> jupiter </option>
         <option value="pluto"> pluto </option>
@@ -89,10 +91,27 @@
         <option value="venus"> venus </option>
     </select>
 
-<br>
+<br/>
+<br/>
+<br/>
+<br/>
 
-    <button onclick="pointAggregator()";>check my score</button>
+<div>
+    <button class="niceB" onclick="pointAggregator()";>check my score</button>
 
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+</div>
+
+<div id="userScore">
+</div>
+
+<br/>
+<br/>
+<br/>
+<br/>
 
 
 </body>

@@ -10,7 +10,6 @@ var testMyName = function(){
 }
 
 
-
 //question one JS code
 var questionOne = function(){
     var allOfMyAnswers = document.getElementsByName("proximity");
@@ -73,10 +72,8 @@ var questionFive = function(){
     }
 }
 
-
-
-
 var pointAggregator = function(){
+    var fname = document.getElementById("firstName").value;
     var AnswerOne= questionOne();
     var AnswerTwo=questionTwo();
     var AnswerThree = questionThree();
@@ -84,7 +81,6 @@ var pointAggregator = function(){
     var AnswerFive = questionFive();
 
     var usersPoints = AnswerOne + AnswerTwo + AnswerThree + AnswerFour + AnswerFive ;
-// var userStatus = " "
     if(usersPoints === 17){
         var userStatus = " Rocket scientist ";
     }
@@ -94,21 +90,6 @@ var pointAggregator = function(){
     else if(usersPoints<=5){
         userStatus = "person who should look up more often";
     }
-    console.log(testMyName() + " you got a score of " + usersPoints + " making you a " + userStatus);
+    document.getElementById("userScore").innerHTML= fname + " you got a score of " + usersPoints + " making you a " + userStatus + "!";
 }
 
-
-
-
-// var tester = function(){
-//     var AnswerOne= questionOne();
-//     var AnswerTwo=questionTwo();
-//     var AnswerThree = questionThree();
-//     var AnswerFour = questionFour();
-//     var AnswerFive = questionFive();
-//     console.log(AnswerOne);
-//     console.log(AnswerTwo);
-//     console.log(AnswerThree);
-//     console.log(AnswerFour);
-//     console.log(AnswerFive);
-// }
