@@ -3,11 +3,7 @@
  */
 
 
-// section for inputting name
-var testMyName = function(){
-    var fname = document.getElementById("firstName").value;
-    return fname;
-}
+
 
 
 //question one JS code
@@ -19,7 +15,7 @@ var questionOne = function(){
             return parseInt(currentAnswer.value);
         }
     }
-}
+};
 
 
 //question two JS code
@@ -34,7 +30,7 @@ var questionTwo = function(){
             }
         }
     return checkedoff;
-}
+};
 
 
 //question three JS code
@@ -48,7 +44,7 @@ var questionThree = function () {
     else{
         return 0;
     }
-}
+};
 
 
 //question four JS code
@@ -57,7 +53,7 @@ var questionFour = function(){
     var questfour = document.getElementById("points");
     questfour = parseInt(questfour.value);
     return questfour;
-}
+};
 
 //question five for JS code
 
@@ -70,7 +66,7 @@ var questionFive = function(){
         return 0;
 
     }
-}
+};
 
 var pointAggregator = function(){
     var fname = document.getElementById("firstName").value;
@@ -91,5 +87,5 @@ var pointAggregator = function(){
         userStatus = "person who should look up more often";
     }
     document.getElementById("userScore").innerHTML= fname + " you got a score of " + usersPoints + " making you a " + userStatus + "!";
-}
+};
 
